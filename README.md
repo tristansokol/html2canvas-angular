@@ -7,6 +7,8 @@ There are two files
 ## Method Reference
 
 __RenderBody__ 
+
 _returns:_ promise
+
 Captures the current body and resolves the promise with a canvas element of the page.
 
