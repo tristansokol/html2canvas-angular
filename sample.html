@@ -1,0 +1,30 @@
+<html ng-app="yourAppName">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+	<div ng-controller="myNoteCtrl">
+
+		<h2>This is a sample</h2>
+		lalalalalala
+
+		<p>
+			<button ng-click="save()">Make a canvas!</button>
+		</p>
+
+
+	</div>
+	<script>
+		var app = angular.module("yourAppName", []);
+
+		app.controller("myNoteCtrl",['$scope','html2canvas-angular', function($scope,h2c) {
+			$scope.save  = function(){
+				h2c.renderBody().then(function(canvas){
+					document.body.appendChild(canvas);
+				});
+			}
+		}]);
+	</script>
+	<script src="./html2canvas-angular.js"></script>
+
+</body>
+</html>
